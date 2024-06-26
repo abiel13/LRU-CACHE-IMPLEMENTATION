@@ -1,4 +1,4 @@
-# LRU Cache Implementation
+# LRU Cache Implementation (Please Click deployments Tab to view Visualization)
 
 Welcome to the LRU Cache Implementation project! This repository contains a minimal  Least Recently Used (LRU) cache built using a doubly linked list  This project provides an efficient way to manage cache data, ensuring that the most recently accessed items are quickly available while removing the least recently used items when the cache reaches its capacity.
 
@@ -21,9 +21,9 @@ An LRU Cache is a data structure that stores a limited number of items. When the
 
 - Efficient caching mechanism
 - Doubly linked list for maintaining order of usage
-- Hash map for O(1) access to cache items
 - Simple and clean code structure
-- Visualization of the cache operations
+- Visualization of the cache operations (please click deployments on the right tab to view)
+  
 
 ## Installation
 
