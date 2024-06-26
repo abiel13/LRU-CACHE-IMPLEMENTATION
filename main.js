@@ -1,12 +1,16 @@
 import { TCache } from "./cache.js";
 
-let cache = new TCache(3);
+let size;
+
+let cache;
 
 const insertBtn = document.getElementById("insert-id");
 const deleteBtn = document.getElementById("delete-btn");
 const output = document.querySelector(".output");
 let key = "";
 let value = "";
+const sizeInp = document.getElementById("size");
+const createBtn = document.getElementById("create-btn");
 
 document.getElementById("key").addEventListener("focusout", (e) => {
   key = e.target.value;
@@ -16,9 +20,14 @@ document.getElementById("value").addEventListener("focusout", (e) => {
   value = e.target.value;
 });
 
+createBtn.addEventListener("click", () => {
+  size = sizeInp.value || 4;
+  cache = new TCache(size);
+});
+
 insertBtn.addEventListener("click", () => {
   console.log(key, value);
-
+  if (!cache) return alert("insert cache size or click create cache");
   cache.set(key, value);
   render();
 });

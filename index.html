@@ -7,7 +7,14 @@
     <title>Cache Implementation</title>
   </head>
   <body>
-    <h1>Cache Implementation Using Linked List</h1>
+    <h1>LRU Cache Implementation Using Linked List</h1>
+    <p style="color: gray; width: 90%; text-align: center">
+      The LRU Cache is a data structure that stores a limited number of items.
+      When the cache is full and a new item needs to be added, it removes the
+      least recently used (LRU) item to make space. Additionally, if an existing
+      item is accessed or updated, it moves to the most recently used (MRU)
+      position. Here's a step-by-step visualization:
+    </p>
     <div class="body">
       <div class="container">
         <div class="input">
@@ -37,6 +44,27 @@
           </h2>
         </div>
       </div>
+    </div>
+
+    <div
+      style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem"
+    >
+      <p style="color: white">input Cache Size default size(4):</p>
+      <input
+        type="number"
+        id="size"
+        style="padding: 0.4rem 1rem; margin-top: 0.4rem"
+      />
+      <button
+        id="create-btn"
+        style="
+          background-color: darksalmon;
+          padding: 0.5rem 1rem;
+          border-radius: 15px;
+        "
+      >
+        Create Cache
+      </button>
     </div>
     <script type="module" src="main.js"></script>
   </body>
