@@ -83,6 +83,7 @@ export class TCache {
         }
         current = current.next;
       }
+      // Move to MRU  if it doesnt already exist
       this.cache.insert(node);
       // Remove the LRU
       if (this.cache.length > this.size) {
@@ -92,6 +93,7 @@ export class TCache {
   }
 
   evict() {
+    // this function removes the LRU
     this.cache.delete(this.cache.head);
   }
 }
